@@ -38,8 +38,9 @@ end
     )
 
 end
-
+ 10.times do 
 Purchase.create!(
-    user: User.first,
-    plant: Plant.first
+    user: User.all.sample,
+    plant: Plant.all.sample
 )
+ end

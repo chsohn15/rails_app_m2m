@@ -1,0 +1,11 @@
+<h1><div><%= @user.name %> </div></h1>
+
+<h2>Plants:</h2><% @user.plants.each do |plant| %> 
+    <div> <%= "#{plant.name}: $#{plant.price}" %> </div>
+    
+<% end %>
+<h2>Balance</h2>
+<div> <%= @user.balance %> </div>
+
+<%= link_to "Delete", user_path(@user), method: "delete"%>
+
