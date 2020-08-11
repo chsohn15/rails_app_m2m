@@ -1,0 +1,19 @@
+<% if @plant.errors.any? %>
+    <div id = "error_messages">
+        <ul>
+            <% @plant.errors.full_messages.each do |message|%>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+<%= form_for @plant do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :price %>
+    <%= f.number_field :price %><br>
+    <%= f.label :img_url, "Image URL" %>
+    <%= f.text_field :img_url %><br>
+    <%= f.submit %>
+<% end %>

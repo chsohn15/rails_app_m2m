@@ -1,0 +1,10 @@
+<h1>All Plants</h1>
+
+<div id="picture_grid">
+    <ul>
+    <% @plants.each do |plant| %>
+        <%= image_tag(plant.img_url, size: "200x190")%>
+        <li><%= link_to plant.name.titlecase, plant_path(plant) %></li>
+    <% end %>
+    </ul>
+</div>

@@ -34,7 +34,7 @@ end
 
     User.create!(
         name: Faker::Name.name,
-        balance:Faker::Number.number(digits:2)
+        balance: "#{Faker::Commerce.price}"
     )
 
 end
