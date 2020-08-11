@@ -1,5 +1,7 @@
 <h2>Name: <%= @plant.name.titlecase %></h2>
 <h2>Price: <%= @plant.price %></h2>
+<h2>Store: <%= @plant.store.name %>
 <h2><%= image_tag(@plant.img_url, size: "200x190")%></h2>
 
-<%= link_to "Delete This Plant", plant_path(@plant), method: :delete %>
+<%= link_to "Delete This Plant", plant_path(@plant), method: :delete %><br>
+<%= link_to "Back to All Plants", plants_path %>

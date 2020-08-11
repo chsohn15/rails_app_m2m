@@ -48,6 +48,6 @@ class PlantsController < ApplicationController
     private
 
     def plant_params
-        params.require(:plant).permit(:name, :price, :img_url)
+        params.require(:plant).permit(:name, :price, :img_url, :store_id)
     end
 end

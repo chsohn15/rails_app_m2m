@@ -15,5 +15,7 @@
     <%= f.number_field :price %><br>
     <%= f.label :img_url, "Image URL" %>
     <%= f.text_field :img_url %><br>
+    <%= f.label :store_name %>
+    <%= f.collection_select :store_id, Store.all, :id, :name %><br>
     <%= f.submit %>
 <% end %>
